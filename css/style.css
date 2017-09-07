@@ -18,6 +18,7 @@ p {
   line-height: 19px;
   font-weight: 100;
 }
+
 /* GRID */
 .container {
   margin-right: auto;
@@ -42,11 +43,13 @@ p {
   margin: 0 2% 20px;
 }
 
+/* TABLETS */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+/* LAPTOPS */
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -61,11 +64,18 @@ p {
     width: 21%;
   }
 }
+/* DESKTOPS */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
+/* TELEVISION */
+@media (min-width: 1900px) {
+  .container {
+    width: 1870px;
+  }
+
 /* HEADER */
 header {
   color:#FFFFFF;
@@ -87,8 +97,8 @@ header nav ul > li {
   margin:0 15px;
 }
 header nav ul > li.btn-outline {
-  padding:10px 15px;
-  border:2px solid #FFFFFF;
+  padding: 10px 15px;
+  border: 2px solid #FFFFFF;
   border-radius: 4px;
 }
 header nav ul > li.btn-outline:hover {
@@ -121,6 +131,7 @@ header .hero img {
   display: block;
   margin: 3em auto 0;
 }
+
 /* BUTTONS */
 .btn {
   border-radius: 4px;
