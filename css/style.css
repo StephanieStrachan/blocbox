@@ -2,22 +2,22 @@ html, body{
   overflow-x: hidden;
 }
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
   color:#333333;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
 }
-h2 {
+/*h2 {
   font-size:28px;
   font-weight: normal;
   margin-bottom: 5px;
-}
-p {
+}*/
+/*p {
   font-size:16px;
   line-height: 19px;
   font-weight: 100;
-}
+}*/
 /* GRID */
 .container {
   margin-right: auto;
@@ -74,9 +74,8 @@ p {
 }
 /* HEADER */
 header {
-  color:#FFFFFF;
-  background: #34495E;
-  background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+  color:#34495e;
+  background: #FFFFFF;
 }
 header nav {
   padding:1em 0;
@@ -94,14 +93,14 @@ header nav ul > li {
 }
 header nav ul > li.btn-outline {
   padding:10px 15px;
-  border:2px solid #FFFFFF;
+  border:2px solid #34495e;
   border-radius: 4px;
 }
 header nav ul > li.btn-outline:hover {
   background:#FFFFFF;
 }
 header nav ul > li > a {
-  color:#FFFFFF;
+  color:#34495e;
   text-decoration: none;
 }
 header nav ul > li.btn-outline:hover > a {
@@ -113,19 +112,37 @@ header .hero {
   position: relative;
 }
 header .hero h1 {
-  font-size:48px;
-  font-weight: normal;
+  font-size:38px;
+  font-weight: medium;
+  line-height: 55px;
   margin:95px 0 0;
+  text-align: left;
 }
 header .hero p {
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 100;
   margin:10px 0 40px;
+  text-align: left;
 }
 header .hero img {
   display: block;
   margin:3em auto 0;
+}
+header .wrapper {
+  width: 100%;
+  margin-top: 220px;
+  height: 702px;
+}
+header .hero-left {
+  left: 150px;
+  width: 50%;
+  position: absolute;
+}
+header .hero-right {
+  left: 60%;
+  width: 50%;
+  position: absolute;
 }
 /* BUTTONS */
 .btn {
@@ -134,15 +151,16 @@ header .hero img {
   font-weight: 700;
   text-decoration: none;
   padding:10px 30px;
-  background: #2ECC71;
-  border: 2px solid #2ECC71;
-  box-shadow: 0px 2px 0px 0px #22894E;
+  background: #72166b;
+  border: 2px solid #72166b;
+  box-shadow: 0px 2px 0px 0px #4b0746;
 }
 /* BENEFITS */
 .benefits {
   text-align: center;
   display:block;
-  position:relative;
+  background: url("../images/gradient.svg");
+  width: 100%;
 }
 .benefits ul {
   margin: 0 auto;
@@ -153,17 +171,25 @@ header .hero img {
   display: inline-block;
 }
 .benefits i {
-  color:#3498DB;
+  color:#FFFFFF;
   font-size:60px;
   margin:0;
   vertical-align: middle;
 }
 .benefits h2 {
-  color:#3498DB;
+  color:#FFFFFF;
+  font-weight: bold;
+  font-size: 28;
+}
+.benefits p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #FFFFFF;
+  line-height: 24px;
 }
 /* PRICING */
 .pricing {
-  background: #34495E url("../images/background.png") top center no-repeat;
+  background: #34495E url("images/gradient.svg") top center no-repeat;
   background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
   background-size:cover;
   text-align: center;
@@ -286,4 +312,7 @@ header .hero img {
   text-align: left;
   font-size:13px;
   margin-top: 30px;
+}
+.staggered {
+  margin-top: 20px;
 }
