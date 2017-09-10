@@ -1,23 +1,9 @@
 html, body{
   overflow-x: hidden;
 }
-body {
-  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
-  color:#333333;
+body  {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-}
-/*h2 {
-  font-size:28px;
-  font-weight: normal;
-  margin-bottom: 5px;
-}*/
-/*p {
-  font-size:16px;
-  line-height: 19px;
-  font-weight: 100;
-}*/
 /* GRID */
 .container {
   margin-right: auto;
@@ -106,49 +92,43 @@ header nav ul > li > a {
 header nav ul > li.btn-outline:hover > a {
   color:#34495E;
 }
-header .hero {
-  text-align: center;
-  display:block;
-  position: relative;
+header .hero-left {
+  display:inline-block;
+  float: left;
+  position: absolute;
+  left: 280px;
+  width: 50%;
 }
-header .hero h1 {
+header .hero-right {
+  text-align: left;
+  display:inline-block;
+  float: right;
+  left: 150px;
+  width: 50%;
+  top: 10px
+}
+header .hero-right h1 {
   font-size:38px;
-  font-weight: medium;
-  line-height: 55px;
-  margin:95px 0 0;
-  text-align: left;
+  line-height:60px;
+  font-weight: 800;
+  color: #34495e;
 }
-header .hero p {
+header .hero-right p {
   font-size: 18px;
-  line-height: 28px;
-  font-weight: 100;
-  margin:10px 0 40px;
+  line-height: 30px;
+  font-weight: 400;
   text-align: left;
-}
-header .hero img {
-  display: block;
-  margin:3em auto 0;
 }
 header .wrapper {
   width: 100%;
-  margin-top: 220px;
+  margin-top: 140px;
   height: 702px;
-}
-header .hero-left {
-  left: 150px;
-  width: 50%;
-  position: absolute;
-}
-header .hero-right {
-  left: 60%;
-  width: 50%;
-  position: absolute;
 }
 /* BUTTONS */
 .btn {
   border-radius: 4px;
   color:#FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   padding:10px 30px;
   background: #72166b;
@@ -157,6 +137,7 @@ header .hero-right {
 }
 /* BENEFITS */
 .benefits {
+  color:#FFFFFF;
   text-align: center;
   display:block;
   background: url("../images/gradient.svg");
@@ -170,33 +151,31 @@ header .hero-right {
   list-style-type: none;
   display: inline-block;
 }
-.benefits i {
-  color:#FFFFFF;
-  font-size:60px;
-  margin:0;
-  vertical-align: middle;
-}
 .benefits h2 {
-  color:#FFFFFF;
-  font-weight: bold;
-  font-size: 28;
+  font-size:28px;
+  font-weight:800;
 }
 .benefits p {
   font-size: 16px;
-  font-weight: normal;
-  color: #FFFFFF;
   line-height: 24px;
+  font-weight: 400;
 }
 /* PRICING */
 .pricing {
-  background: #34495E url("images/gradient.svg") top center no-repeat;
-  background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+  background: url("../images/desk-image.svg");
   background-size:cover;
   text-align: center;
   padding:4em 0;
+  color:#34495e;
 }
-.pricing h2, .pricing p {
-  color:#FFFFFF;
+.pricing h2, {
+  font-size:28px;
+  font-weight:800;
+}
+.pricing p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
 }
 .pricing ul {
   margin:0 auto;
@@ -204,6 +183,7 @@ header .hero-right {
 }
 .pricing ul li {
   list-style-type: none;
+  font-weight: normal;
 }
 .box {
   padding:0 15px 15px;
@@ -218,10 +198,10 @@ header .hero-right {
   margin-top:0px;
 }
 .box h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  color: #FFFFFF;
+  font-weight: black;
   text-transform: uppercase;
-  background: #E2E2E2;
+  background: #34495e;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.40);
   left:0;
   right:0;
@@ -231,19 +211,18 @@ header .hero-right {
   padding:10px 0;
 }
 .box h4 {
+  color: #34495e;
   font-size:50px;
-  font-weight: normal;
+  font-weight: black;
   margin:40px 0 10px;
-  color:#3498DB;
 }
 .box h4 span {
   font-size:32px;
   vertical-align: top;
 }
 .box h4 span.month {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  color:#888888;
+  color:#909090;
   font-size:20px;
   vertical-align: middle;
 }
@@ -260,7 +239,7 @@ header .hero-right {
 }
 .small {
   font-size: 12px;
-  color: #FEFEFE;
+  color: #34495e;
   line-height: 15px;
   font-style:italic;
 }
@@ -270,7 +249,18 @@ header .hero-right {
   text-align: center;
 }
 .testimonials h2 {
-  color:#3498DB;
+  color: #34495e;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 800;
+}
+.testimonials p {
+  color: #34495e;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 .testimonials ul li {
   list-style-type: none;
@@ -284,6 +274,8 @@ header .hero-right {
   padding:30px;
   width:auto;
   margin:0;
+  line-height: 24px;
+  font-weight: 400;
 }
 .testimonials blockquote:after {
   top: 100%;
@@ -304,7 +296,7 @@ header .hero-right {
   border-radius:50%;
   float: left;
   display: inline-block;
-  margin:20px 10px 0 0;
+  margin:20px 6px 0 0;
 }
 .testimonials p.name {
   float: left;
@@ -315,4 +307,52 @@ header .hero-right {
 }
 .staggered {
   margin-top: 20px;
+}
+/* FOOTER */
+footer {
+  background-color: #dbe8f1;
+  color: #34495e;
+  font-weight: italic;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+footer p, footer nav ul {
+  font-weight: italic;
+  font-size:14px;
+  font-weight:100;
+  text-align: center;
+  margin: 10px auto 0;
+}
+footer nav ul li {
+  font-weight: italic;
+  list-style-type: none;
+  display: inline;
+}
+footer nav ul li a {
+  font-weight: italic;
+  color:#34495e;
+  text-decoration: none;
+}
+footer .right-footer-block {
+  background-color: transparent;
+}
+footer .logo{
+  padding: 2.35em 0;
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 992px){
+  footer{
+    background-color: #dbe8f1;
+    height: 100px;
+  }
+  footer p, footer nav ul{
+    padding: 2em 0;
+    text-align: left;
+  }
+  footer .logo{
+    padding: 2em 0 2em 1.5em;
+  }
 }
