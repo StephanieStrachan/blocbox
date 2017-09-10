@@ -27,15 +27,16 @@ body  {
   min-height: 1px;
   margin:0 2% 20px;
 }
-@media (min-width: 768px) {
+/* TABLETS */
+@media only screen (min-width: 768px) {
   .container {
-    width: 750px;
+    width: auto;
   }
 }
 /* LAPTOPS */
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .container {
-    width: 970px;
+    width: auto;
   }
   .one-half {
     width:46%;
@@ -48,14 +49,14 @@ body  {
   }
 }
 /* DESKTOPS */
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: auto;
   }
   /* TELEVISION */
-@media (min-width: 1900px) {
+@media only screen and (min-width: 1900px) {
   .container {
-    width: 1870px;
+    width: auto;
   }
 }
 /* HEADER */
@@ -140,7 +141,7 @@ header .wrapper {
   color:#FFFFFF;
   text-align: center;
   display:block;
-  background: url("../images/gradient.svg");
+  background: url("../images/gradient.jpg");
   width: 100%;
 }
 .benefits ul {
