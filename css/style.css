@@ -4,7 +4,6 @@ html, body{
 body  {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
-
 /* GRID */
 .container {
   margin-right: auto;
@@ -26,16 +25,14 @@ body  {
   float: left;
   position: relative;
   min-height: 1px;
-  margin:0 2% 20px;
+  margin: 0 2% 20px;
 }
-
 /* PHONES */
 @media only screen (min-width: 480px) {
   .container {
     width: 320px;
   }
 }
-
 /* TABLETS */
 @media only screen (min-width: 768px) {
   .container {
@@ -51,31 +48,28 @@ body  {
     width: 21%;
   }
 }
-
- /* LAPTOPS */
- @media (min-width: 992px) {
-   .container {
-     width: 970px;
-   }
-   .one-half {
-     width: 46%;
-   }
-   .one-third {
-     width: 29.33333%;
-   }
-   .one-fourth {
-     width: 21%;
-   }
- }
-
- /* DESKTOPS */
- @media (min-width: 1200px) {
-   .container {
-     width: 1170px;
-   }
- }
-
-  /* TELEVISION */
+/* LAPTOPS */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .one-half {
+    width: 46%;
+  }
+  .one-third {
+    width: 29.33333%;
+  }
+  .one-fourth {
+    width: 21%;
+  }
+}
+/* DESKTOPS */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* TELEVISION */
 @media only screen and (min-width: 1900px) {
   .container {
     width: 1870px;
@@ -125,7 +119,7 @@ header .hero-left {
 }
 header .hero-right {
   text-align: left;
-  display: inline-block;
+  display:inline-block;
   float: right;
   left: 150px;
   width: 50%;
@@ -148,7 +142,6 @@ header .wrapper {
   margin-top: 140px;
   height: 702px;
 }
-
 /* BUTTONS */
 .btn {
   border-radius: 4px;
@@ -160,7 +153,6 @@ header .wrapper {
   border: 2px solid #72166b;
   box-shadow: 0px 2px 0px 0px #4b0746;
 }
-
 /* BENEFITS */
 .benefits {
   color: #FFFFFF;
@@ -186,7 +178,6 @@ header .wrapper {
   line-height: 24px;
   font-weight: 400;
 }
-
 /* PRICING */
 .pricing {
   background: url("../images/desk-image.svg");
@@ -205,7 +196,7 @@ header .wrapper {
   font-weight: 400;
 }
 .pricing ul {
-  margin: 0 auto;
+  margin:0 auto;
   padding: 2em 0;
 }
 .pricing ul li {
@@ -213,7 +204,7 @@ header .wrapper {
   font-weight: normal;
 }
 .box {
-  padding:0 15px 15px;
+  padding: 0 15px 15px;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
   min-height: 439px;
@@ -270,14 +261,13 @@ header .wrapper {
   line-height: 15px;
   font-style: italic;
 }
-
 /* TESTIMONIALS */
 .testimonials {
   padding: 4em 0;
   text-align: center;
 }
 .testimonials h2 {
-  color: #34495e;
+  color: #34495E;
   font-size: 28px;
   line-height: 36px;
   font-weight: 800;
@@ -324,7 +314,7 @@ header .wrapper {
   border-radius: 50%;
   float: left;
   display: inline-block;
-  margin:20px 6px 0 0;
+  margin: 20px 6px 0 0;
 }
 .testimonials p.name {
   float: left;
@@ -336,6 +326,7 @@ header .wrapper {
 .staggered {
   margin-top: 20px;
 }
+/* CALL TO ACTION */
 .call-to-action h2 {
   font-size: 28px;
   font-weight: 800;
@@ -348,7 +339,6 @@ header .wrapper {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-
 /* FOOTER */
 footer {
   background-color: #dbe8f1;
@@ -362,7 +352,7 @@ footer {
 footer p, footer nav ul {
   font-weight: italic;
   font-size: 14px;
-  font-weight: 100;
+  font-weight:100;
   text-align: center;
   margin: 10px auto 0;
 }
@@ -394,6 +384,179 @@ footer .logo{
     text-align: left;
   }
   footer .logo{
-    padding: 1em 0 2em 1.5em;
+    padding: 2em 0 2em 1.5em;
+  }
+}
+/* DASHBOARD */
+.dashboard {
+  background: #DBE8F1;
+}
+.left-nav {
+  height: 100vh;
+  width: 14.66666667%;
+  color: #DBE8F1;
+  background: #161616;
+  float: left;
+  position: fixed;
+  display: block;
+}
+.left-nav .site-logo {
+  padding: 20px 0;
+  background: #DBE8F1;
+  display: block;
+  text-align: center;
+}
+.left-nav .items {
+  padding: 0 10%;
+  color: #DBE8F1;
+}
+.left-nav .items p {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #DBE8F1;
+  line-height: 22px;
+}
+.left-nav .items ul {
+  margin: 0 0 40px;
+  padding: 0;
+}
+.left-nav .items ul li {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+.left-nav .items ul li a {
+  color: #DBE8F1;
+  text-decoration: none;
+  font-weight: 100;
+}
+.left-nav .items ul li a i {
+  width: 16px;
+  text-align: center;
+  margin-right: 8px;
+}
+/* LEFT NAVBAR SETTINGS */
+.left-nav .settings {
+  position: absolute;
+  background: #72166B;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+.left-nav .settings img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: inline-block;
+}
+.left-nav .settings p {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 8px;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+}
+.left-nav .settings a {
+  color: #DBE8F1;
+  text-decoration: none;
+  text-align: right;
+  float: right;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+/* HEAD */
+.head .container {
+  position: relative;
+  left: 14.66666667%;
+  width: 100%;
+  text-align: left;
+  background: #161616;
+  height: 11.5%;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.head .container h1 {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  margin: 30px 0 20px 36px;
+  font-size: 48px;
+  color: #DBE8F1;
+  line-height: 44px;
+  display: inline-block;
+}
+.head .container .btn {
+
+  display: inline-block;
+}
+/* CONTENT */
+.content {
+  padding: 6em 1% 1.5em;
+  float: right;
+  width: 98%;
+  position: relative;
+}
+.content-item {
+  width: 96%;
+  margin: 0 2% 25px;
+  float: left;
+  display: block;
+}
+.item-box {
+  display: block;
+  height: 230px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+/* Larger Mobile Devices */
+@media (min-width:460px) {
+  .content {
+    padding: 1.5em 1%;
+    float: right;
+    width: 90%;
+    position: relative;
+  }
+  .content-item {
+    width: 46%;
+    margin: 0 2% 25px;
+    float: left;
+    display: block;
+  }
+}
+/* Tablets */
+@media (min-width:768px) {
+  .content {
+    padding: 1.5em 5%;
+    float: right;
+    width: 90%;
+    position: relative;
+  }
+  .content > .container {
+    width: 700px;
+  }
+  .content-item {
+    width: 31.33333%;
+    margin: 0 1% 25px;
+  }
+}
+/* Laptops and Desktops */
+@media (min-width:992px) {
+  .content {
+    padding: 1.5em 1%;
+    float: right;
+    width: 83.33333333%;
+    position: relative;
+  }
+  .content > .container {
+    width: auto;
+  }
+  .content-item {
+    width: 23%;
+    margin: 0 1% 25px;
   }
 }
