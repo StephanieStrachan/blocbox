@@ -1,5 +1,7 @@
 html, body{
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 body  {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
@@ -75,8 +77,7 @@ body  {
     width: 1870px;
   }
 }
-
-/* HEADER */
+/* HEADER Home Page */
 header {
   color: #34495e;
   background: #FFFFFF;
@@ -85,9 +86,10 @@ header nav {
   padding: 1em 0;
 }
 header nav ul {
-  display: inline;
+  display: inline-block;
   text-align: right;
   float: right;
+  padding: 0;
   margin: 0;
 }
 header nav ul > li {
@@ -119,7 +121,7 @@ header .hero-left {
 }
 header .hero-right {
   text-align: left;
-  display:inline-block;
+  display: inline-block;
   float: right;
   left: 150px;
   width: 50%;
@@ -196,7 +198,7 @@ header .wrapper {
   font-weight: 400;
 }
 .pricing ul {
-  margin:0 auto;
+  margin: 0 auto;
   padding: 2em 0;
 }
 .pricing ul li {
@@ -211,14 +213,14 @@ header .wrapper {
   position: relative;
   margin-top: 25px;
 }
-.box.middle {
+.box .middle {
   min-height: 485px;
   margin-top: 0px;
 }
 .box h3 {
   color: #FFFFFF;
   font-weight: black;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   background: #34495e;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.40);
   left: 0;
@@ -341,7 +343,7 @@ header .wrapper {
 }
 /* FOOTER */
 footer {
-  background-color: #dbe8f1;
+  background-color: #DBE8F1;
   color: #34495e;
   font-weight: italic;
   height: 150px;
@@ -352,7 +354,7 @@ footer {
 footer p, footer nav ul {
   font-weight: italic;
   font-size: 14px;
-  font-weight:100;
+  font-weight: 100;
   text-align: center;
   margin: 10px auto 0;
 }
@@ -371,12 +373,12 @@ footer .right-footer-block {
 }
 footer .logo{
   padding: 2.35em 0;
-  margin: 0 auto;
+  margin: -14px auto;
   display: block;
 }
 @media (min-width: 992px){
-  footer{
-    background-color: #dbe8f1;
+  footer {
+    background-color: #DBE8F1;
     height: 100px;
   }
   footer p, footer nav ul{
@@ -392,13 +394,71 @@ footer .logo{
   background: #DBE8F1;
 }
 .left-nav {
-  height: 100vh;
-  width: 14.66666667%;
+  height: 100%;
+  width: 280px;
   color: #DBE8F1;
   background: #161616;
   float: left;
-  position: fixed;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
+}
+.left-nav.open {
   display: block;
+  width: 280px;
+  background: #161616;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+    z-index: 100;
+}
+.hamburger {
+  position: absolute;
+  z-index: 1000;
+  background: #34495E;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  left: 5px;
+  top: 15px;
+}
+@media (min-width:992px) {
+  .left-nav {
+    height: 100vh;
+    width: 14.66666667%;
+    color: #FFFFFF;
+    background: #161616;
+    float: left;
+    position: fixed;
+    display: block;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+  }
+  .left-nav.open {
+    width: 14.66666667%;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+  }
+  .hamburger {
+    display:none;
+  }
 }
 .left-nav .site-logo {
   padding: 20px 0;
@@ -409,11 +469,13 @@ footer .logo{
 .left-nav .items {
   padding: 0 10%;
   color: #DBE8F1;
+  font-size: 18px;
+  line-height: 24px;
 }
 .left-nav .items p {
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
   color: #DBE8F1;
   line-height: 22px;
 }
@@ -428,14 +490,14 @@ footer .logo{
 .left-nav .items ul li a {
   color: #DBE8F1;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 400;
 }
 .left-nav .items ul li a i {
   width: 16px;
   text-align: center;
   margin-right: 8px;
 }
-/* LEFT NAVBAR SETTINGS */
+/* LEFT NAVBAR SETTINGS bottom left Dashboard */
 .left-nav .settings {
   position: absolute;
   background: #72166B;
@@ -458,6 +520,7 @@ footer .logo{
   padding-top: 8px;
   font-weight: 400;
   margin: 0 0 0 10px;
+  font-size: 18px;
 }
 .left-nav .settings a {
   color: #DBE8F1;
@@ -466,40 +529,31 @@ footer .logo{
   float: right;
   margin-right: 10px;
   margin-top: 8px;
+  font-size: 20px;
 }
 a:active {
   background-color: #B19CD9;
 }
-/* HEAD */
-.head .container {
-  position: relative;
-  left: 14.66666667%;
-  width: 100%;
-  text-align: left;
-  background: #161616;
-  height: 11.5%;
-  display: inline-block;
-  padding-bottom: 20px;
-}
-.head .container h1 {
-  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  font-weight: 800;
-  margin: 30px 0 20px 36px;
-  font-size: 48px;
-  color: #DBE8F1;
-  line-height: 44px;
-  display: inline-block;
-}
-.head .container .btn {
-
-  display: inline-block;
-}
-/* CONTENT */
+/* CONTENT Dashboard */
 .content {
   padding: 6em 1% 1.5em;
   float: right;
   width: 98%;
   position: relative;
+}
+.content .header {
+  margin: 0 1% 20px;
+}
+.content .header h1 {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #161616;
+  line-height: 44px;
+  display: inline-block;
+}
+.content .header > a {
+  float: right;
 }
 .content-item {
   width: 96%;
@@ -516,8 +570,67 @@ a:active {
   overflow: hidden;
   padding: 20px;
 }
+.item-box > img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.item-box h2 {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  margin: 0;
+}
+.item-box h2 a {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.item-box p {
+  font-size: 16px;
+  color: #161616;
+  line-height: 22px;
+  margin: 5px 0 0;
+}
+
+/* Dashboard TOP BAR */
+/*.top {
+  width: 100%;
+  height: 102px;
+  display: inline-block;
+  z-index: 1;
+}
+.bar {
+  background: #161616;
+  height: 102px;
+  width: 100%;
+  left: 280px;
+  padding: 8px;
+}
+.bar h1 {
+  color: #DBE8F1;
+  text-align: center;
+  font-size: 48px;
+}
+.top a {
+  position: relative;
+  float: right;
+  font-size: 18px;
+  width: 60px;
+  margin-top: -100px;
+  right: 20px;
+  z-index: 2;
+}*/
 /* Larger Mobile Devices */
-@media (min-width:460px) {
+@media (min-width: 460px) {
   .content {
     padding: 1.5em 1%;
     float: right;
@@ -532,7 +645,7 @@ a:active {
   }
 }
 /* Tablets */
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .content {
     padding: 1.5em 5%;
     float: right;
@@ -548,7 +661,7 @@ a:active {
   }
 }
 /* Laptops and Desktops */
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .content {
     padding: 1.5em 1%;
     float: right;
