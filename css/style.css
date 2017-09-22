@@ -154,6 +154,7 @@ header .wrapper {
   background: #72166b;
   border: 2px solid #72166b;
   box-shadow: 0px 2px 0px 0px #4b0746;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
 }
 /* BENEFITS */
 .benefits {
@@ -521,6 +522,7 @@ footer .logo{
   font-weight: 400;
   margin: 0 0 0 10px;
   font-size: 18px;
+  color: #DBE8F1;
 }
 .left-nav .settings a {
   color: #DBE8F1;
