@@ -543,19 +543,32 @@ a:active {
   width: 98%;
   position: relative;
 }
-.content .header {
-  margin: 0 1% 20px;
+.top .head {
+  color: #DBE8F1;
+  background-color: #161616;
+  text-align: center;
+  width: 100%;
+  height: 102px;
+  margin-left: 300px;
+  /*left: 280px;*/
+  padding: 8px;
+  margin: 0;
 }
-.content .header h1 {
+.top .head h1 {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 36px;
-  color: #161616;
+  font-weight: 800;
+  font-size: 48px;
+  color: #DBE8F1;
   line-height: 44px;
   display: inline-block;
+  margin-left: 390px;
 }
-.content .header > a {
-  float: right;
+.top .head .menu .btn {
+  margin-right: 20px;
+}
+.settings .menu {
+  display: inline-block;
+  margin-top: 0;
 }
 .content-item {
   width: 96%;
